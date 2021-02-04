@@ -186,7 +186,7 @@ String.singleton_class     # => #<Class:String>
 String.new.singleton_class # => #<Class:#<String:0x17a1d1c>>
 </ruby>
 
-WARNING: Fixnums and symbols have no singleton classes, +singleton_class+ raises +TypeError+ on them. Moreover, the singleton classes of +nil+, +true+, and +false+, are +NilClass+, +TrueClass+, and +FalseClass+, respectively.
+WARNING: Integers and symbols have no singleton classes, +singleton_class+ raises +TypeError+ on them. Moreover, the singleton classes of +nil+, +true+, and +false+, are +NilClass+, +TrueClass+, and +FalseClass+, respectively.
 
 NOTE: Defined in +active_support/core_ext/kernel/singleton_class.rb+.
 
@@ -1757,7 +1757,7 @@ h5. +constantize+
 The method +constantize+ resolves the constant reference expression in its receiver:
 
 <ruby>
-"Fixnum".constantize # => Fixnum
+"Integer".constantize # => Integer
 
 module M
   X = 1
@@ -2537,7 +2537,7 @@ To do so, the method loops over the pairs and builds nodes that depend on the _v
 <ruby>
 XML_TYPE_NAMES = {
   "Symbol"     => "symbol",
-  "Fixnum"     => "integer",
+  "Integer"     => "integer",
   "Bignum"     => "integer",
   "BigDecimal" => "decimal",
   "Float"      => "float",

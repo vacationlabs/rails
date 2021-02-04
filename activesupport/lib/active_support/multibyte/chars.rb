@@ -271,12 +271,12 @@ module ActiveSupport #:nodoc:
         else
           result = Unicode.u_unpack(@wrapped_string)
           case args.first
-          when Fixnum
+          when Integer
             raise IndexError, "index #{args[0]} out of string" if args[0] >= result.length
             min = args[0]
             max = args[1].nil? ? min : (min + args[1] - 1)
             range = Range.new(min, max)
-            replace_by = [replace_by].pack('U') if replace_by.is_a?(Fixnum)
+            replace_by = [replace_by].pack('U') if replace_by.is_a?(Integer)
           when Range
             raise RangeError, "#{args[0]} out of range" if args[0].min >= result.length
             range = args[0]

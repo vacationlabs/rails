@@ -50,7 +50,7 @@ class Hash
   #
   #     XML_TYPE_NAMES = {
   #       "Symbol"     => "symbol",
-  #       "Fixnum"     => "integer",
+  #       "Integer"     => "integer",
   #       "Bignum"     => "integer",
   #       "BigDecimal" => "decimal",
   #       "Float"      => "float",

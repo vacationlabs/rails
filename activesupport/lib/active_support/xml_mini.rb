@@ -32,7 +32,7 @@ module ActiveSupport
 
     TYPE_NAMES = {
       "Symbol"     => "symbol",
-      "Fixnum"     => "integer",
+      "Integer"     => "integer",
       "Bignum"     => "integer",
       "BigDecimal" => "decimal",
       "Float"      => "float",

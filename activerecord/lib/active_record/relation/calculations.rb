@@ -102,7 +102,7 @@ module ActiveRecord
     # <tt>:order</tt>, <tt>:group</tt>, <tt>:having</tt>, and <tt>:joins</tt> can be passed to customize the query.
     #
     # There are two basic forms of output:
-    #   * Single aggregate value: The single value is type cast to Fixnum for COUNT, Float
+    #   * Single aggregate value: The single value is type cast to Integer for COUNT, Float
     #     for AVG, and the given column's type for everything else.
     #   * Grouped values: This returns an ordered hash of the values and groups them by the
     #     <tt>:group</tt> option. It takes either a column name, or the name of a belongs_to association.

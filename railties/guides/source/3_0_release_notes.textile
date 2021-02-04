@@ -362,7 +362,7 @@ Validations have been moved from Active Record into Active Model, providing an i
 ** <tt>:exclusion => { :in => Enumerable }</tt>.
 ** <tt>:inclusion => { :in => Enumerable }</tt>.
 ** <tt>:format => { :with => Regexp, :on => :create }</tt>.
-** <tt>:length => { :maximum => Fixnum }</tt>.
+** <tt>:length => { :maximum => Integer }</tt>.
 ** <tt>:numericality => Boolean</tt>.
 ** <tt>:presence => Boolean</tt>.
 ** <tt>:uniqueness => Boolean</tt>.

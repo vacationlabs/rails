@@ -21,7 +21,7 @@ module ActiveRecord
       end
 
       # Updates the attribute identified by <tt>attr_name</tt> with the specified +value+. Empty strings
-      # for fixnum and float columns are turned into +nil+.
+      # for Integer and float columns are turned into +nil+.
       def write_attribute(attr_name, value)
         attr_name = attr_name.to_s
         attr_name = self.class.primary_key if attr_name == 'id' && self.class.primary_key

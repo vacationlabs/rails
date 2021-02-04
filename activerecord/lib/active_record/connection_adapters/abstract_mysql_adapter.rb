@@ -565,7 +565,7 @@ module ActiveRecord
           case length
           when Hash
             column_names.each {|name| option_strings[name] += "(#{length[name]})" if length.has_key?(name) && length[name].present?}
-          when Fixnum
+          when Integer
             column_names.each {|name| option_strings[name] += "(#{length})"}
           end
         end

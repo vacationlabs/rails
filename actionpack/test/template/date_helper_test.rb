@@ -19,7 +19,7 @@ class DateHelperTest < ActionView::TestCase
   end
 
   def assert_distance_of_time_in_words(from, to=nil)
-    Fixnum.send(:private, :/) if RUBY_VERSION >= '1.9.3' # test we avoid Integer#/ (redefined by mathn)
+    Integer.send(:private, :/) if RUBY_VERSION >= '1.9.3' # test we avoid Integer#/ (redefined by mathn)
 
     to ||= from
 
@@ -99,7 +99,7 @@ class DateHelperTest < ActionView::TestCase
     assert_equal "about 4 hours", distance_of_time_in_words(from + 4.hours, to)
     assert_equal "less than 20 seconds", distance_of_time_in_words(from + 19.seconds, to, true)
   ensure
-    Fixnum.send(:public, :/) if RUBY_VERSION >= '1.9.3'
+    Integer.send(:public, :/) if RUBY_VERSION >= '1.9.3'
   end
 
   def test_distance_in_words

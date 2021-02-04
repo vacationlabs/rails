@@ -25,7 +25,7 @@ class Class #:nodoc:
 
   # Returns an array with the direct children of +self+.
   #
-  #   Integer.subclasses # => [Bignum, Fixnum]
+  #   Integer.subclasses # => [Bignum, Integer]
   def subclasses
     subclasses, chain = [], descendants
     chain.each do |k|

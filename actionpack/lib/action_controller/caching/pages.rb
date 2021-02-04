@@ -111,7 +111,7 @@ module ActionController #:nodoc:
           gzip_level = case gzip_level
           when Symbol
             Zlib.const_get(gzip_level.to_s.upcase)
-          when Fixnum
+          when Integer
             gzip_level
           when false
             nil
