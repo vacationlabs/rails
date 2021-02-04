@@ -53,7 +53,7 @@ group :doc do
   # to a bug, but the PR that fixes it has been there
   # for some weeks unapplied. As a temporary solution
   # this is our own fork with the fix.
-  gem 'sdoc',  :git => 'https://github.com/fxn/sdoc.git'
+  gem 'sdoc' #,  :git => 'https://github.com/fxn/sdoc.git'
   gem 'RedCloth', '~> 4.2'
   gem 'w3c_validators', '< 1.3'
 end
